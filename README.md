@@ -1,6 +1,6 @@
 # Human Activity Recognition using Smartphone Data
 
-**Team Members:** Ammar Bin Jalal, Abdul Moin]  
+**Team Members:** Ammar Bin Jalal (502254), Abdul Moin (517892)
 **Course:** CS 470: Machine Learning
 
 ## 1. Abstract
