@@ -82,7 +82,6 @@ We evaluated the models on the unseen test set of 2,947 samples.
 *(Below is the Confusion Matrix comparing the models. Note the higher error rate between classes 1 and 2 (Sitting/Standing) compared to others.)*
 
 ![Confusion Matrix](confusion_matrix.png)
-*(Please upload your confusion matrix image to the repo and confirm the filename matches)*
 
 ## 6. Conclusion
 This project demonstrated that while Deep Learning is a powerful tool, well-tuned classical algorithms like SVM can still outperform neural networks on structured, tabular datasets with high dimensionality. The SVM model achieved a production-ready accuracy of **95.4%**.
@@ -91,12 +90,6 @@ This project demonstrated that while Deep Learning is a powerful tool, well-tune
 * **Feature Selection:** Use Principal Component Analysis (PCA) to reduce the 561 features to a smaller set (e.g., 50) to speed up training without significant accuracy loss.
 * **Raw Signal Processing:** Instead of using the pre-calculated features, we could feed the raw signal data into a **1D-Convolutional Neural Network (CNN)** or **LSTM** to let the model learn its own features from the time-series data.
 
-## 8. How to Run This Project
-1.  Clone the repository.
-2.  Install dependencies: `pip install pandas numpy scikit-learn tensorflow seaborn matplotlib`.
-3.  Ensure `train.csv` and `test.csv` are in the project directory.
-4.  Run the notebook/script to train models and generate results.
-
-## 9. References
+## 8. References
 1.  Anguita, D., et al. (2013). *A Public Domain Dataset for Human Activity Recognition Using Smartphones*.
 2.  Breiman, L. (2001). *Random Forests*. Machine Learning.
