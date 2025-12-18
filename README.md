@@ -1,7 +1,8 @@
 # Human Activity Recognition (HAR) using Smartphone Data
 
-**Course:** CS 470: Machine Learning (Fall 2025)
-**Team Members:** Ammar Bin Jalal, Abdul Moin
+**Course:** CS 470: Machine Learning
+
+**Team Members:** Ammar Bin Jalal (502254), Abdul Moin (517892)
 
 ---
 
