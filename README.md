@@ -37,6 +37,44 @@ The dataset consists of recordings of 30 subjects performing activities of daily
     * **Label Encoding:** Converted text labels to integers (0-5).
     * **Feature Scaling:** Applied `StandardScaler` to normalize features to mean=0 and variance=1. This was critical for the convergence of the SVM and Neural Network.
 
+## 3. Dataset Properties & Description
+
+The project utilizes the **Human Activity Recognition (HAR)** dataset. It is a high-quality, pre-processed dataset collected from the accelerometers and gyroscopes of Samsung Galaxy S II smartphones.
+
+### 3.1 Data Overview
+* **Source:** 30 volunteers performing 6 standard activities while carrying a waist-mounted smartphone.
+* **Total Samples:** 10,299 instances.
+    * **Training Set:** 7,352 samples (71%).
+    * **Test Set:** 2,947 samples (29%).
+* **Missing Values:** None (0 null values). The dataset is clean and ready for immediate modeling.
+
+### 3.2 Feature Engineering (Input)
+The dataset does not contain raw signal logs. Instead, it features **561 pre-computed attributes** per sample. These features are statistical summaries derived from the raw 3-axial signals (tAcc-XYZ and tGyro-XYZ):
+
+* **Time-Domain Features (prefix `t`):** Captures constant movement properties (e.g., `tBodyAcc-mean()-X`, `tGravityAcc-min()-Y`).
+* **Frequency-Domain Features (prefix `f`):** Captures vibration and repetition frequencies using Fast Fourier Transform (FFT) (e.g., `fBodyGyro-energy()`).
+* **Statistical Metrics:** Each signal is summarized using:
+    * `mean()`: Average value.
+    * `std()`: Standard deviation.
+    * `mad()`: Median absolute deviation.
+    * `max()` / `min()`: Range limits.
+    * `sma()`: Signal magnitude area.
+    * `energy()`: Energy measure.
+    * `entropy()`: Signal entropy.
+
+### 3.3 Target Labels (Output)
+The model predicts one of six distinct movement classes:
+1.  `WALKING`
+2.  `WALKING_UPSTAIRS`
+3.  `WALKING_DOWNSTAIRS`
+4.  `SITTING`
+5.  `STANDING`
+6.  `LAYING`
+
+### 3.4 Data Preprocessing
+* **Normalization:** All feature values are normalized and bounded within `[-1, 1]`. This allows models like SVM and Neural Networks to converge faster without one feature dominating others due to scale differences.
+* **Class Balance:** The classes are reasonably balanced, with `LAYING` being the most frequent (~19%) and `WALKING_DOWNSTAIRS` the least frequent (~13%), removing the need for synthetic oversampling (SMOTE).
+
 ## 4. Methodology
 
 ### 4.1 Classical Machine Learning
