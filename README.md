@@ -19,24 +19,6 @@ This project utilizes the **UCI HAR Dataset** (Project 30) to train and evaluate
 2.  **Support Vector Machine (SVM):** A kernel-based method ideal for high-dimensional feature spaces.
 3.  **Deep Learning (MLP):** A fully connected neural network to learn complex non-linear representations.
 
-## 3. Dataset Description
-The dataset consists of recordings of 30 subjects performing activities of daily living (ADL) while carrying a smartphone with embedded inertial sensors.
-
-* **Input Features:** 561 numeric features per sample. These are statistical metrics (mean, std, energy, entropy, etc.) derived from raw time-domain and frequency-domain signals.
-* **Target Classes (6):**
-    * `WALKING`
-    * `WALKING_UPSTAIRS`
-    * `WALKING_DOWNSTAIRS`
-    * `SITTING`
-    * `STANDING`
-    * `LAYING`
-* **Data Split:**
-    * **Training Set:** 7,352 samples (approx. 71%)
-    * **Test Set:** 2,947 samples (approx. 29%)
-* **Preprocessing:**
-    * **Label Encoding:** Converted text labels to integers (0-5).
-    * **Feature Scaling:** Applied `StandardScaler` to normalize features to mean=0 and variance=1. This was critical for the convergence of the SVM and Neural Network.
-
 ## 3. Dataset Properties & Description
 
 The project utilizes the **Human Activity Recognition (HAR)** dataset. It is a high-quality, pre-processed dataset collected from the accelerometers and gyroscopes of Samsung Galaxy S II smartphones.
